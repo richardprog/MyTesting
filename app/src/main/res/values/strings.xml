@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyTesting</string>
+    <string name="activity_main_textbox_name">Enter your name</string>
+    <string name="activity_main_textbox_telno">Enter your telephone number</string>
+    <string name="activity_main_button_submit_info">Submit Info</string>
+    <string name="activity_dog_textbox_ask_input">Type a string to return the value back to parent activity.</string>
+    <string name="activity_main_textbox_gender">Select one gender</string>
+    <string name="activity_main_radio_button_male">Male</string>
+    <string name="activity_main_radio_button_female">Female</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activity_main_textbox_is_single">Are you single?</string>
+    <string name="activity_main_toggle_button_text_off_no">No</string>
+    <string name="activity_main_toggle_button_text_off_yes">Yes</string>
+    <string name="activity_main_textbox_blood_group">Select blood group</string>
+    <string name="activity_main_textbox_dateofbirth">Your birth date</string>
+
+    <string-array name="blood_group">
+        <item>Group A</item>
+        <item>Group B</item>
+        <item>Group AB</item>
+        <item>Group O</item>
+    </string-array>
+
+</resources>
