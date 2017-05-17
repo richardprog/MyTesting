@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 
@@ -67,15 +68,19 @@ public class MainActivity extends AppCompatActivity implements SubmitButtonFragm
     // Implemented function from SubmitButtonFragment
     @Override
     public void retrieveDetailsInfo() {
-        UserDetails userDetails = detailsFormFragment.getUserDetailsInfo();
-        Intent i = new Intent(this, RetrievedDetailsActivity.class);
-        i.putExtra("userDetailsDataName", userDetails.getName());
-        i.putExtra("userDetailsDataGender", userDetails.getGender());
-        i.putExtra("userDetailsDataTelNo", userDetails.getTelNo());
-        i.putExtra("userDetailsDataIsSingle", String.valueOf(userDetails.isSingle()));
-        i.putExtra("userDetailsDataBloodGroup", userDetails.getBloodGroup());
-        i.putExtra("userDetailsDataDateOfBirth", new SimpleDateFormat("yyyy/mm/dd").format(userDetails.getDateOfBirth()));
-        startActivity(i);
+        if (detailsFormFragment.isAllEditTextFilled()){
+            UserDetails userDetails = detailsFormFragment.getUserDetailsInfo();
+            Intent i = new Intent(this, RetrievedDetailsActivity.class);
+            i.putExtra("userDetailsDataName", userDetails.getName());
+            i.putExtra("userDetailsDataGender", userDetails.getGender());
+            i.putExtra("userDetailsDataTelNo", userDetails.getTelNo());
+            i.putExtra("userDetailsDataIsSingle", String.valueOf(userDetails.isSingle()));
+            i.putExtra("userDetailsDataBloodGroup", userDetails.getBloodGroup());
+            i.putExtra("userDetailsDataDateOfBirth", new SimpleDateFormat("yyyy/mm/dd").format(userDetails.getDateOfBirth()));
+            startActivity(i);
+        } else {
+            Toast.makeText(MainActivity.this, getString(R.string.activity_main_input_validation_alert), Toast.LENGTH_LONG).show();
+        }
     }
 
     // Implemented function from DetailsFormFragment

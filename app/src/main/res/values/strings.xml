@@ -7,12 +7,15 @@
     <string name="activity_main_textbox_gender">Select one gender</string>
     <string name="activity_main_radio_button_male">Male</string>
     <string name="activity_main_radio_button_female">Female</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="activity_main_textbox_is_single">Are you single?</string>
     <string name="activity_main_toggle_button_text_off_no">No</string>
     <string name="activity_main_toggle_button_text_off_yes">Yes</string>
     <string name="activity_main_textbox_blood_group">Select blood group</string>
     <string name="activity_main_textbox_dateofbirth">Your birth date</string>
+    <string name="activity_main_button_gender_default">Submit Info</string>
+    <string name="activity_main_button_gender_change_male">Hey Dude, Submit!</string>
+    <string name="activity_main_button_gender_change_female">Submit Please, My Lady?</string>
+    <string name="activity_main_input_validation_alert">Please fill in all the blanks.</string>
 
     <string-array name="blood_group">
         <item>Group A</item>
